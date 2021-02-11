@@ -297,7 +297,7 @@ module.exports = (window => {
                   }" />
                 </span>
                 <span class="info" itemProp="author" itemScope itemType="http://schema.org/Person">
-                  <strong class="name" itemProp="name">${get(itemData, 'name')}</strong>
+                  <strong class="name" itemProp="name">${get(itemData, 'name')}asdasdsadasdasdasd</strong>
                   <span class="time">${get(itemData, 'lastUpdatedAgo')}</span>
                 </span>
               </a>
