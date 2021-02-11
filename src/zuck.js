@@ -683,19 +683,21 @@ module.exports = (window => {
           };
         });
         
-        if (storyViewer.querySelectorAll('.paused_story'), (i, el) => {
+        each(storyViewer.querySelectorAll('.paused_story'), (i, el) => {
           el.onclick = e => {
             e.preventDefault();
             storyViewer.classList.add("paused"), storyViewer.querySelector(".paused_story").style.display = "none", storyViewer.querySelector(".play_story").style.display = "inline", storyViewer.querySelector(".play_story").innerHTML = "<i class='far fa-play-circle fa-2x' aria-hidden='true'></i> PLAY";
           };
-        }
+        });
             
-        if (storyViewer.querySelectorAll('.play_story'), (i, el) => {
+        each(storyViewer.querySelectorAll('.play_story'), (i, el) => {
           el.onclick = e => {
             e.preventDefault();
             storyViewer.classList.remove("paused"), storyViewer.querySelector(".paused_story").style.display = "inline", storyViewer.querySelector(".play_story").style.display = "none", storyViewer.querySelector(".paused_story").innerHTML = "<i class='far fa-play-circle fa-2x' aria-hidden='true'></i> PAUSE";
           };
-        }
+        });
+        
+        storyViewer.appendChild(slides);
         
         if (className === 'viewing') {
           playVideoItem(storyViewer, storyViewer.querySelectorAll(`[data-index="${currentItem}"].active`), false);
