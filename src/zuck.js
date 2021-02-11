@@ -682,23 +682,19 @@ module.exports = (window => {
             modal.close();
           };
         });
-
-        each(storyViewer.querySelectorAll('.paused_story'), (i, el) => {
+        
+        if (storyViewer.querySelectorAll('.paused_story'), (i, el) => {
           el.onclick = e => {
             e.preventDefault();
             storyViewer.classList.add("paused"), storyViewer.querySelector(".paused_story").style.display = "none", storyViewer.querySelector(".play_story").style.display = "inline", storyViewer.querySelector(".play_story").innerHTML = "<i class='far fa-play-circle fa-2x' aria-hidden='true'></i> PLAY";
           };
-        });
-        
-        each(storyViewer.querySelectorAll('.play_story'), (i, el) => {
+        }
+            
+        if (storyViewer.querySelectorAll('.play_story'), (i, el) => {
           el.onclick = e => {
             e.preventDefault();
-            storyViewer.classList.remove("paused"), storyViewer.querySelector(".paused_story").style.display = "inline", storyViewer.querySelector(".play_story").style.display = "none", storyViewer.querySelector(".paused_story").innerHTML = "<i class='far fa-pause-circle fa-2x' aria-hidden='true'></i> PAUSE";
+            storyViewer.classList.remove("paused"), storyViewer.querySelector(".paused_story").style.display = "inline", storyViewer.querySelector(".play_story").style.display = "none", storyViewer.querySelector(".paused_story").innerHTML = "<i class='far fa-play-circle fa-2x' aria-hidden='true'></i> PAUSE";
           };
-        });
-        
-        if (storyViewer.querySelectorAll('.paused_story'), (i, el) => {
-          playVideoItem(storyViewer, storyViewer.querySelectorAll(`[data-index="${currentItem}"].active`), false);
         }
         
         if (className === 'viewing') {
